@@ -1,0 +1,486 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&display=swap');
+:root{
+    --mainColor:#ff206e;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    background-image: url('../images/light_dot.jpg');
+}
+.w-20{
+    width: 100%;
+}
+.navbar{
+    background-color: #000;
+}
+.navbar-brand{
+color: #fff;
+font-weight: 600;
+font-size:1.5rem;
+letter-spacing: 2px;
+text-transform: uppercase;
+}
+.navbar-expand-lg .navbar-nav .nav-link {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1rem;/*/////////////////////////////***/
+}
+.navbar-nav .nav-item a.active {
+    color: var(--mainColor)
+}
+.header {
+    background-image: url('../images/bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.header-title{
+    font-size: 3rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+.header .header-info .header-content .view{
+    color: var(--mainColor);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+.header-icons{
+    position: absolute;
+    bottom: 1rem;
+    left: 3rem;
+    right: 1rem;
+}
+.header .header-icons a i{
+    color: #fff;
+    border: 1px solid rgb(34, 34, 34);
+    padding: 15px;
+}
+.header .header-icons a i:hover{
+    border: 1px solid #fff;
+}
+.text-effect{
+    opacity: 0;
+    animation: text-opacity 0.9s;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+    position: relative;
+}
+.text-effect::after{
+    content: '';
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    animation:block 5s;
+    animation-delay: 1s;
+}
+
+@keyframes text-opacity{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes block{
+    0%{
+        left: 0;
+        width: 0;
+    }
+    75%{
+        left: 0;
+        width: 100%;
+    }
+    100%{
+        left: 100%;
+        width: 0%;
+    }
+}
+
+.navbar-toggle span{
+    color: #fff;
+    display: flex;
+    background-color: transparent;
+    border: 2px solid #fff;
+    margin: 25reb auto;
+}
+.navbar-toggle span:nth-child(1){
+    width: 25px;
+}
+.navbar-toggle span:nth-child(2){
+    width: 25px;
+}
+.navbar-toggle span:nth-child(3){
+    width: 25px;
+}
+.about{
+    padding-top: 6rem;
+    margin-bottom: 5rem;
+}
+.about .container .title{
+    padding-top: 30px;
+}
+.title h2, .title h3{
+    font-weight: 800;
+    text-transform: uppercase;
+}
+.title h2{
+    font-size: 5rem;
+    color: #cacacaca;
+}
+.title h3{
+    font-size: 2.5rem;
+}
+.about h4{
+    font-weight: 600;
+}
+.about h5{
+    color: var(--mainColor);
+    font-weight: 600;
+    font-size: 1rem;
+}
+.about .container .row img{
+    margin-top: 0;
+    width: 100%;
+    height: 400px;
+}
+
+/************************************************/
+/*ممكن اكتب بداخل ال p ----> mb-5  this mean margin bottom 5 يعني بتبعد الفقرة 5 عن الايميل*/
+/*او طريقة اخرى اكتب التالي*/
+.about .about-content :last-child{
+    margin-top: 5rem;
+}
+.about .about-content a{
+    color: #000;
+    /*text-decoration: none*/  /*هاي فائدتها تحذف السطر اللي تحت الايميل؟؟*/
+}
+.services{
+    background-image: url('../images/dark_dot.jpg');
+}
+.services .container .title{
+    padding-top: 120px;
+}
+.services .title h2{
+    color: #222;
+}
+.services .title h3{
+    color: #fff;
+}
+.services .row{
+    padding-top: 30px;
+    padding-bottom: 60px;
+}
+.services .row i{
+    font-size: 1.5rem;
+}
+/*****/
+.services .services-box{
+    position: relative;
+}
+.services .services-box .services-icons{
+    color: #fff;
+    background-color: #000;
+    padding: 17px;
+    border-radius: 50%;/*rounding circle هاي اسم هذه الخاصية لو استخدمتها بال html*/      
+    position: absolute;
+    left: 50%;/*مع كتابة كلاس اسمه translate-middle بزبط موقع الدائرة*/
+   /*OR: transform: translate(-50%,-75px);*/
+
+}
+.services-box:hover .services-icons{
+    color: var(--mainColor);
+}
+/**********************************************************/
+/*الخط اللي تحت الكلمات*/
+.services .services-text{
+    position: relative;
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.services .services-text .services-h5{
+    content: '';
+    position: absolute;
+    width: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--mainColor);
+    bottom: 7rem;
+    height: 2px;
+    transition: 0.5s;
+}
+.services-box:hover .services-h5{
+    width: 30%;
+}
+.services .services-text p{
+    margin-top: 40px;
+    margin-bottom: -30px;
+}
+/***************************************************/
+.figures{
+    position: relative;
+    background-image: url('../images/figures-bg.jpg');
+    background-size: cover;
+    text-align: center;
+    height: 45vh;
+    margin-top: 150px;
+    margin-bottom: 50px;
+}
+.figures .container{
+    padding: 5rem 0;
+    text-align: center
+}
+.overlay{
+    background-color: rgba(0,0,0,.8);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+.figures i {
+    font-size: 2rem;
+    font-weight: 900;
+}
+.figures p:first-of-type{
+    color: var(--mainColor);
+    font-weight: 900;
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+.figures p:last-of-type{
+    font-size: 1rem;
+    font-weight: 600;
+}
+/***************************************************/
+.container .title{
+    padding-top: 90px;
+}  
+/************************************/
+.portfolio{
+   padding-top: 6rem; 
+}
+/*******************************/
+.portfolio .portfolio__sub1 h2{
+    font-size: 20px;
+    font-weight: 500;
+}
+.portfolio .portfolio__sub1 p{
+    font-size: 15px;
+}
+.portfolio span i{
+    background-color: #000;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 50%;
+    padding: 7px;
+}
+.portfolio .item:hover .overlay {
+    opacity: 1;
+    z-index: 999;
+    padding: 5.5rem 0 5rem;
+}
+.portfolio .title{
+    margin-bottom: -30px;
+}
+.portfolio .item-text{
+    margin-bottom: 50px;
+}
+/*********************************/
+.sub-portfolio{
+    position: relative;
+}
+.sub-portfolio::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right: 10%;
+    bottom: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 0;
+    transition: .5s;
+}
+.sub-portfolio:hover::after{
+    bottom: 10%;
+}
+/*********************************/
+.sub-portfolio1{
+    position: relative;
+}
+.sub-portfolio1::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right: 10%;
+    bottom: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 0;
+    transition: .5s;
+}
+.sub-portfolio1:hover::after{
+    bottom: 10%;
+}
+/*********************************/
+.sub-portfolio2{
+    position: relative;
+}
+::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right: 10%;
+    bottom: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 0;
+    transition: .5s;
+}
+.sub-portfolio2:hover::after{
+    bottom: 10%;
+}
+/**********************خلللللللللللللل***********/
+.portfolio .portfolio__sub1{
+    z-index: 9999;
+    text-align: center;
+    margin-top: 60px;
+    margin-left: 100px;
+}
+.portfolio .portfolio__sub1:hover::after{
+    z-index: 9999;
+    text-align: center;
+    margin-top: 60px;
+    margin-left: 100px;
+}
+/*********************************/
+.sub-portfolio3{
+    position: relative;
+}
+.sub-portfolio3::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right: 10%;
+    bottom: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 5px;
+    transition: .5s;
+}
+.sub-portfolio3:hover::after{
+    bottom: 10%;
+}
+.portfolio .sub-portfolio span:hover i{
+    color: var(--mainColor);
+}
+.portfolio .sub-portfolio1 span:hover i{
+    color: var(--mainColor);
+}
+.portfolio .sub-portfolio2 span:hover i{
+    color: var(--mainColor);
+}
+.portfolio .sub-portfolio3 span:hover i{
+    color: var(--mainColor);
+}
+/**************************************************************/
+.nav-tabs .nav-item .nav-link.active{
+    color: var(--mainColor);
+    border: 0;
+    background-color: transparent;
+}
+.nav-tabs .nav-link{
+    color: #000;
+    background-color: transparent;
+    border: 0;
+}
+.testimonials img{
+    width: 90px;  
+}
+.carousel-indicators [data-bs-target]{
+    background-color: var(--mainColor);
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+}
+.carousel-indicators{
+    bottom: -59px;
+}
+.testimonials .container{
+    margin-top: 200px;
+}
+.testimonials .container .title{
+    margin-bottom: -40px;
+}
+.testimonials .container .item-text{
+    margin-bottom: 100px;
+}
+
+/*//////////////////////////////////////////*/
+.carousel-inner{
+    overflow: unset;
+}
+.carousel-inner img{   
+    position: absolute;
+    left: 45.9%;
+}
+/****************************************/
+.testimonials .container .clients{
+    border: 3px solid rgb(244, 244, 244);
+}
+/****************************************/
+/*الكلمات اللي تحت الكلمات*/
+.testimonials .clients{
+    position: relative;
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.testimonials .clients .services-h5{
+    content: '';
+    position: absolute;
+    width: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--mainColor);
+    bottom: 5rem;
+    height: 2px;
+    transition: 0.5s;
+}
+.carousel-inner:hover .services-h5{
+    width: 5%;
+}
+/*****************************************/
+.testimonials .container .clients h5{
+    margin-top: 60px;
+}
+.testimonials .container .clients p{
+    margin-top: 40px;
+}
+.testimonials .carousel-item .clients{
+    position: relative;
+}
+.testimonials .carousel-item .clients img{
+    position: absolute;
+    margin-top: -45px;
+}
+/******************************************************************/
+.companies .row .col{
+    background-image: url('../images/dark_dot.jpg');
+    padding: 60px;
+    margin-top: 100px;
+}
+
+/*********/
+body{
+    height: 5000px;
+}
+@media (max-width:991px){
+    .navbar{
+        background-color: #000;
+    }
+}
